@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    margin: 50px;
+    text-transform: uppercase;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    float: left;
+    margin-left: 210px;
+    width: 350px;
+    height: 350px;
+    box-shadow: 4px 6px 21px 5px rgba(0,0,0,0.75);
+    background-color: white;
+}
+
+img{
+    width: 200px;
+    max-height: 200px;
+    margin-top: 60px;
+    margin-left: -25px;
+}
+
+h2{
+    text-align: center;
+    margin-left: 150px;
+}
+
+.Hotel{
+    grid-column: 1 / 3;
+    border: 1px solid black;
+}
+
+.Cabin{
+    grid-column: 2 / 3;
+    border: 1px solid black;
+}
+
+.Motel{
+    grid-column: 3 / 3;
+    border: 1px solid black;
+}
