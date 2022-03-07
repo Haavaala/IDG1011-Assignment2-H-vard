@@ -1,52 +1,128 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-h1{
-    text-align: center;
-    margin: 50px;
-    text-transform: uppercase;
+h1 {
+  text-align: center;
+  margin: 50px;
+  text-transform: uppercase;
 }
 
-body{
-    background-color: antiquewhite;
+body {
+  background-color: antiquewhite;
 }
 
-section{
-    display: grid;
-    grid-template-columns: 100px 100px 100px;
-    float: left;
-    margin-left: 210px;
-    width: 350px;
-    height: 350px;
-    box-shadow: 4px 6px 21px 5px rgba(0,0,0,0.75);
-    background-color: white;
+section {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  float: left;
+  margin-left: 210px;
+  width: 350px;
+  height: 350px;
+  box-shadow: 4px 6px 21px 5px rgba(0, 0, 0, 0.75);
+  background-color:rgb(177, 216, 248);
+  position: relative;
 }
 
-img{
-    width: 200px;
-    max-height: 200px;
-    margin-top: 60px;
-    margin-left: -25px;
+section img {
+  width: 200px;
+  max-height: 200px;
+  margin-top: 60px;
+  margin-left: -15px;
 }
 
-h2{
-    text-align: center;
-    margin-left: 150px;
+h2 {
+  text-align: center;
+  margin-left: 150px;
 }
 
-.Hotel{
-    grid-column: 1 / 3;
-    border: 1px solid black;
+.Hotel {
+  grid-column: 1 / 3;
+  border: 1px solid black;
 }
 
-.Cabin{
-    grid-column: 2 / 3;
-    border: 1px solid black;
+.Hotel img {
+  transition: opacity 1s ease-in-out;
 }
 
-.Motel{
-    grid-column: 3 / 3;
-    border: 1px solid black;
+.Hotel img.img-front {
+  margin-left: -115px;
+}
+
+.Hotel img.img-back {
+  width: 200px;
+  height: 200px;
+  margin-top: 60px;
+  margin-left: -15px;
+  z-index: 1;
+}
+
+.Hotel img.img-back:hover {
+  opacity: 0;
+  cursor: pointer;
+}
+
+#button1{
+    width: 100px;
+    height: 30px;
+    position: relative;
+    margin-left: 120px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#button1:active{
+    bottom: -3px;
+}
+
+#button1:hover{
+    background-color: bisque;
+}
+
+#button2{
+    width: 100px;
+    height: 30px;
+    position: relative;
+    margin-left: -70px;
+    margin-top: 290px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#button2:active{
+    bottom: -3px;
+}
+
+#button2:hover{
+    background-color: bisque;
+}
+
+
+#button3{
+    width: 100px;
+    height: 30px;
+    position: relative;
+    margin-left: -70px;
+    margin-top: 290px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#button3:active{
+    bottom: -3px;
+}
+
+#button3:hover{
+    background-color: bisque;
+}
+
+.Cabin {
+  grid-column: 2 / 3;
+  border: 1px solid black;
+}
+
+.Motel {
+  grid-column: 3 / 3;
+  border: 1px solid black;
 }
