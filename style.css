@@ -15,10 +15,10 @@ body {
 
 section {
   display: grid;
-  grid-template-columns: 100px 100px 100px;
+  grid-template-columns: 50px 50px 50px;
   float: left;
-  margin-left: 210px;
-  width: 350px;
+  margin-left: 130px;
+  width: 250px;
   height: 350px;
   box-shadow: 4px 6px 21px 5px rgba(0, 0, 0, 0.75);
   background-color:rgb(177, 216, 248);
@@ -34,20 +34,13 @@ section img {
 
 h2 {
   text-align: center;
-  margin-left: 150px;
+  margin-left: 90px;
+  margin-top: 15px;
 }
 
 .Hotel {
   grid-column: 1 / 3;
   border: 1px solid black;
-}
-
-.Hotel img {
-  transition: opacity 1s ease-in-out;
-}
-
-.Hotel img.img-front {
-  margin-left: -115px;
 }
 
 .Hotel img.img-back {
@@ -58,63 +51,26 @@ h2 {
   z-index: 1;
 }
 
-.Hotel img.img-back:hover {
-  opacity: 0;
-  cursor: pointer;
-}
 
-#button1{
+
+#button1, #button2, #button3{
     width: 100px;
     height: 30px;
     position: relative;
-    margin-left: 120px;
+    margin-left: -20px;
     cursor: pointer;
     border-radius: 20px;
-}
-
-#button1:active{
-    bottom: -3px;
-}
-
-#button1:hover{
-    background-color: bisque;
-}
-
-#button2{
-    width: 100px;
-    height: 30px;
-    position: relative;
-    margin-left: -70px;
     margin-top: 290px;
-    cursor: pointer;
-    border-radius: 20px;
 }
 
-#button2:active{
-    bottom: -3px;
-}
 
-#button2:hover{
+#button1:hover, #button2:hover, #button3:hover{
     background-color: bisque;
 }
 
 
-#button3{
-    width: 100px;
-    height: 30px;
-    position: relative;
-    margin-left: -70px;
-    margin-top: 290px;
-    cursor: pointer;
-    border-radius: 20px;
-}
-
-#button3:active{
+#button1:active, #button2:active, #button3:active{
     bottom: -3px;
-}
-
-#button3:hover{
-    background-color: bisque;
 }
 
 .Cabin {
