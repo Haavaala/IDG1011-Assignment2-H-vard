@@ -1,40 +1,30 @@
-const openPopupButtons = document.querySelectorAll('[data-popup-target]')
-const closePopupButtons = document.querySelectorAll('[data-close-button]')
-const overlay = document.getElementById('overlay')
+const btns = document.querySelectorAll('[data-target]');
+const close_btns = document.querySelectorAll(".popup-btn");
+const overlay = document.querySelector("#overlay")
 
-openPopupButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const popup = document.querySelector(button.dataset.popupTarget)
-        openPopup(popup)
-    })
-})
 
-overlay.addEventListener('click', () => {
-    const popups = document.querySelectorAll('.popup.active')
-    popups.forEach(popup => {
-        closePopup(popup)
-
-    })
-})
-
-closePopupButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const popup = button.closest('.popup')
-        closePopup(popup)
-    })
-})
-
-function openPopup(popup) {
-    if (popup == null) return
-    popup.classList.add('active')
+btns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+    document.querySelector(btn.dataset.target).classList.add('active');
     overlay.classList.add('active')
-}
+});
+});
 
-function closePopup(popup) {
-    if (popup == null) return
-    popup.classList.remove('active')
+close_btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+    document.querySelector(btn.dataset.target).classList.remove('active');
     overlay.classList.remove('active')
-}
+});
+});
+
+window.onclick = (e) => {
+    if (e.target == overlay) {
+        const popups = document.querySelectorAll('.popup');
+        popups.forEach((popup) => popup.classList.remove('active'));
+        overlay.classList.remove('active');
+    }
+};
+
 
 let hotel = {}; 
 object

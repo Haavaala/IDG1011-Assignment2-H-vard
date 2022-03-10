@@ -48,9 +48,9 @@ section img {
 }
 
 .insidehotel{
-  width: 200px;
-  height: 150px;
-  
+  width: 300px;
+  height: 250px;
+  margin: 20px;
 }
 
 .popup.active{
@@ -80,7 +80,7 @@ font-weight: bold;
   font-weight: bold;
 }
 
-.popup-content{
+.popup1-content{
   padding: 10px 15px;
 }
 
@@ -96,7 +96,7 @@ font-weight: bold;
   background-color: rgba(0, 0, 0, 0.75);
 }
 
-#overlay.active{
+#overlay.active {
   opacity: 1;
   pointer-events: all;
   
@@ -123,7 +123,7 @@ h2 {
 
 
 
-#button1, #button2, #button3{
+.btn{
     width: 100px;
     height: 30px;
     position: relative;
@@ -134,12 +134,12 @@ h2 {
 }
 
 
-#button1:hover, #button2:hover, #button3:hover{
+.btn:hover{
     background-color: bisque;
 }
 
 
-#button1:active, #button2:active, #button3:active{
+.btn:active{
     bottom: -3px;
 }
 

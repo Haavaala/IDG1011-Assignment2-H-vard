@@ -1,48 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment2</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-<h1>Håvards Living Center Norway</h1>
-<div id="overlay"></div>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Håvards Living Center Norway</h1>
 
     <section class="Hotel">
-        <h2>Hotels</h2>
-        
-<img src="./images/Hotel.jpg" alt="Hotel" class="img-back">
+      <h2>Hotels</h2>
 
-<button id="button1"data-popup-target="#popup">Press</button>
-<div class="popup" id="popup">
-<div class="popup-header">
-<div class="title">Hotel</div>
-<button data-close-button class="close-button">&times;</button>
-</div>
-<div class="popup-content">
-    <img class="insidehotel" src="./images/Hotelinside.jpg" alt="Inside of hotel">
-</div>
-</div>
+      <img src="./images/Hotel.jpg" alt="Hotel" class="img-back" />
 
-</section>
+      <button class="btn" data-target="popup1">Press</button>
+      <div class="popup" id="popup1">
+        <div class="popup-header">
+          <div class="title">Hotel</div>
+          <button class="btn popup-btn" data-target="popup1">&times;</button>
+        </div>
+        <div class="popup1-content">
+          <img
+            class="insidehotel"
+            src="./images/Hotelinside.jpg"
+            alt="Inside of hotel"
+          />
+        </div>
+      </div>
+    </section>
 
+    <section class="Cabin">
+      <h2>Cabins</h2>
+      <img src="./images/Cabin.jpg" alt="Cabin" />
 
-<section class="Cabin">
-    <h2>Cabins</h2>
-<img src="./images/Cabin.jpg" alt="Cabin">
-<button id="button2">Press</button>
-</section>
+      <button class="btn" data-target="popup2">Press</button>
+      <div class="popup" id="popup2">
+        <div class="popup-header">
+          <div class="title">Cabin</div>
+          <button class="btn popup-btn" data-target="popup2">&times;</button>
+        </div>
+        <div class="popup2-content">
+          <img
+            class="insidehotel"
+            src="./images/Hotelinside.jpg"
+            alt="Inside of hotel"
+          />
+        </div>
+      </div>
+    </section>
 
-<section class="Motel">
-    <h2>Motels</h2>
-<img src="./images/Motel.jpg" alt="Motel">
-<button id="button3">Press</button>
-</section>
+    <section class="Motel">
+      <h2>Motels</h2>
+      <img src="./images/Motel.jpg" alt="Motel" />
+      <button class="btn" data-target="popup3">Press</button>
 
- <script src="main.js"></script> 
-</body>
+      <div class="popup" id="popup3">
+        <div class="popup-header">
+          <div class="title">Cabin</div>
+          <button class="btn popup-btn" data-target="popup3">&times;</button>
+        </div>
+        <div class="popup3-content">
+          <img
+            class="insidehotel"
+            src="./images/Hotelinside.jpg"
+            alt="Inside of hotel"
+          />
+        </div>
+      </div>
+    </section>
+    <div id="overlay"></div>
+    <script src="main.js"></script>
+  </body>
 </html>
