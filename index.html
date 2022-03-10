@@ -8,15 +8,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
 <h1>Håvards Living Center Norway</h1>
+<div id="overlay"></div>
 
     <section class="Hotel">
         <h2>Hotels</h2>
         
 <img src="./images/Hotel.jpg" alt="Hotel" class="img-back">
 
-<button id="button1">Press</button>
+<button id="button1"data-popup-target="#popup">Press</button>
+<div class="popup" id="popup">
+<div class="popup-header">
+<div class="title">Hotel</div>
+<button data-close-button class="close-button">&times;</button>
+</div>
+<div class="popup-content">
+    <img class="insidehotel" src="./images/Hotelinside.jpg" alt="Inside of hotel">
+</div>
+</div>
+
 </section>
+
 
 <section class="Cabin">
     <h2>Cabins</h2>
