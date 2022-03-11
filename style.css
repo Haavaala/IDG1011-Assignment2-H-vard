@@ -29,7 +29,7 @@ section img {
   width: 200px;
   max-height: 200px;
   margin-top: 60px;
-  margin-left: -15px;
+  margin-left: -25px;
 }
 
 .popup{
@@ -51,6 +51,16 @@ section img {
   width: 300px;
   height: 250px;
   margin: 20px;
+}
+
+.insidecabin{
+  margin: 10px;
+  padding: 20px;
+}
+
+.insidemotel{
+  margin: 10px;
+  padding: 20px;
 }
 
 .popup.active{
@@ -80,7 +90,7 @@ font-weight: bold;
   font-weight: bold;
 }
 
-.popup1-content{
+.popup1-content  .popup2-content, .popup3-content{
   padding: 10px 15px;
 }
 
@@ -102,6 +112,18 @@ font-weight: bold;
   
 }
 
+.close-button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  
+}
+
+
+
 h2 {
   text-align: center;
   margin-left: 90px;
@@ -113,17 +135,11 @@ h2 {
   border: 1px solid black;
 }
 
-.Hotel img.img-back {
-  width: 200px;
-  height: 200px;
-  margin-top: 60px;
-  margin-left: -15px;
-  z-index: 1;
-}
 
 
 
-.btn{
+
+.btn {
     width: 100px;
     height: 30px;
     position: relative;

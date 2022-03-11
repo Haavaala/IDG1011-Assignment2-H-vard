@@ -1,5 +1,5 @@
 const btns = document.querySelectorAll('[data-target]');
-const close_btns = document.querySelectorAll(".popup-btn");
+const close_btns = document.querySelectorAll(".close-popup");
 const overlay = document.querySelector("#overlay")
 
 
@@ -10,12 +10,14 @@ btns.forEach((btn) => {
 });
 });
 
+
 close_btns.forEach((btn) => {
     btn.addEventListener("click", () => {
-    document.querySelector(btn.dataset.target).classList.remove('active');
-    overlay.classList.remove('active')
-});
-});
+      const popup = btn.closest(".popup");
+      popup.classList.remove("active");
+      overlay.classList.remove("active");
+    });
+  });
 
 window.onclick = (e) => {
     if (e.target == overlay) {
@@ -64,3 +66,4 @@ motel.tv = 1;
 motel.checkAvailability = function() {
 return this.places -this.booked;
 };
+
