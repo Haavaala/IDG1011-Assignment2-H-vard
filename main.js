@@ -32,56 +32,32 @@ window.onclick = (e) => {
 };
 
 
-function hotel(){
+function Living(name, rooms, booked, bathroom, tv){
+  this.name = name;
+  this.rooms = rooms;
+  this.booked = booked;
+  this.bathroom = bathroom;
+  this.tv = tv;
+  this.rooma = function(){
+    return this.rooms -this.booked;
 
-  let hotelArray =[
-{name: 'Plank'},
-{rooms:  30},
-{booked: 10},
-{bathroom: 1},
-{tv: 1},
-  ]
+  };
+  
 }
+  let cabin = new Living('Hytta', 10, 3, 1, false)
+  let hotel = new Living('Hotellet', 50, 25, 1, true)
+  let motel = new Living('Motel', 20, 15, 1, true)
 
-document.getElementById(hotelfacts).innerHTML = html
-hotel.checkAvailability = function() {
-return this.rooms -this.booked;
-};
+  document.getElementById('motelname').innerHTML = motel.name;
+  document.getElementById('motelrooms').innerHTML = motel.rooms;
+  document.getElementById('motelbooked').innerHTML = motel.booked;
+  document.getElementById('motelbath').innerHTML = motel.bathroom;
+  document.getElementById('moteltv').innerHTML = motel.tv;
+  
 
-console.log(hotel)
-
-function cabin(){
-
-  let cabinArray =[
-{name: 'Hytta'},
-{rooms:  10},
-{booked: 3},
-{bathroom: 1},
-{tv: 1},
-  ]
-}
-
-cabin.checkAvailability = function() {
-return this.choices -this.booked;
-};
-
-function motel(){
-
-  let motelArray =[
-{name: 'Motel'},
-{rooms:  20},
-{booked: 15},
-{bathroom: 1},
-{tv: 1},
-  ]
-}
-
-motel.checkAvailability = function() {
-return this.places -this.booked;
-};
 
 
 
 
 const siteCreation= new Date();
-document.getElementById('fullyear').innerHTML=siteCreation.getFullYear();
+document.getElementById('fullyear').innerHTML = siteCreation.getFullYear();
