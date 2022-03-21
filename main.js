@@ -1,3 +1,7 @@
+
+
+
+
 const btns = document.querySelectorAll('[data-target]');
 const close_btns = document.querySelectorAll(".close-popup");
 const overlay = document.querySelector("#overlay")
@@ -28,42 +32,56 @@ window.onclick = (e) => {
 };
 
 
-let hotel = {}; 
-object
+function hotel(){
 
-hotel.name = 'Plank';
-hotel.rooms = 30;
-hotel.booked = 10;
-hotel.bathroom = 1;
-hotel.tv = 1;
+  let hotelArray =[
+{name: 'Plank'},
+{rooms:  30},
+{booked: 10},
+{bathroom: 1},
+{tv: 1},
+  ]
+}
 
+document.getElementById(hotelfacts).innerHTML = html
 hotel.checkAvailability = function() {
 return this.rooms -this.booked;
 };
 
-let cabin = {}; 
-object
+console.log(hotel)
 
-cabin.name = 'Hytta';
-cabin.choices = 10;
-cabin.booked = 3;
-cabin.bathroom = 1;
-cabin.tv = 1;
+function cabin(){
+
+  let cabinArray =[
+{name: 'Hytta'},
+{rooms:  10},
+{booked: 3},
+{bathroom: 1},
+{tv: 1},
+  ]
+}
 
 cabin.checkAvailability = function() {
 return this.choices -this.booked;
 };
 
-let motel = {}; 
-object
+function motel(){
 
-motel.name = 'Motel';
-motel.places = 20;
-motel.booked = 15;
-motel.bathroom = 1;
-motel.tv = 1;
+  let motelArray =[
+{name: 'Motel'},
+{rooms:  20},
+{booked: 15},
+{bathroom: 1},
+{tv: 1},
+  ]
+}
 
 motel.checkAvailability = function() {
 return this.places -this.booked;
 };
 
+
+
+
+const siteCreation= new Date();
+document.getElementById('fullyear').innerHTML=siteCreation.getFullYear();
