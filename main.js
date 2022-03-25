@@ -45,11 +45,15 @@ function Living(name, rooms, booked, bathroom, tv, bed){
   };
   delete this.bed;
 }
-  let hotel = new Living('Hotellet', 50, 25, 1, true)
+  let hotel = new Living('Hotellet', 50, 25, 1.4, true)
   let cabin = new Living('Hytta', 10, 3, 1, true)
-  let motel = new Living('Motel', 20, 15, '1', '2', '3', false)
+  let motel = new Living(['Motel', ' Moss'], 20, 15, 1, false)
 
-  
+  const newHotelName = hotel.name.toUpperCase();
+  hotel.name = newHotelName;
+
+  const newHotelBath = Math.round(hotel.bathroom);
+  hotel.bathroom = newHotelBath;
   
   document.getElementById('hotelname').innerHTML = hotel.name;
   document.getElementById('hotelrooms').innerHTML = hotel.rooms;
