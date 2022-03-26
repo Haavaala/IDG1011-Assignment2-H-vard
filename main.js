@@ -1,12 +1,12 @@
 
 
 
-
+//creating variables for the popup and the buttons functions//
 const btns = document.querySelectorAll('[data-target]');
 const close_btns = document.querySelectorAll(".close-popup");
 const overlay = document.querySelector("#overlay")
 
-
+//when buttons get clicked, the popup will appear//
 btns.forEach((btn) => {
     btn.addEventListener('click', () => {
     document.querySelector(btn.dataset.target).classList.add('active');
@@ -14,7 +14,7 @@ btns.forEach((btn) => {
 });
 });
 
-
+//the close popup button, when this is clicked, the popup modul will disappear//
 close_btns.forEach((btn) => {
     btn.addEventListener("click", () => {
       const popup = btn.closest(".popup");
@@ -22,7 +22,7 @@ close_btns.forEach((btn) => {
       overlay.classList.remove("active");
     });
   });
-
+//when clicking outside the popup, it will disapear since it removes 'active'//
 window.onclick = (e) => {
     if (e.target == overlay) {
         const popups = document.querySelectorAll('.popup');
@@ -31,7 +31,7 @@ window.onclick = (e) => {
     }
 };
 
-
+//my objects//
 function Living(name, rooms, booked, bathroom, tv, bed){
   this.name = name;
   this.rooms = rooms;
@@ -43,18 +43,23 @@ function Living(name, rooms, booked, bathroom, tv, bed){
     return this.rooms -this.booked;
 
   };
+  //removing a property//
   delete this.bed;
 }
+//set values for the properties//
   let hotel = new Living('Hotellet', 50, 25, 1.4, true)
   let cabin = new Living('Hytta', 10, 3, 1, true)
   let motel = new Living(['Motel', ' Moss'], 20, 15, 1, false)
 
+  //change the name of the hotel to uppercase//
   const newHotelName = hotel.name.toUpperCase();
   hotel.name = newHotelName;
 
+  //rounding the number down for the hotel.bathroom with a math object//
   const newHotelBath = Math.round(hotel.bathroom);
   hotel.bathroom = newHotelBath;
   
+  //getting the javascript values to display in the HTML and the webpage by using 'document' and 'getElementById'//
   document.getElementById('hotelname').innerHTML = hotel.name;
   document.getElementById('hotelrooms').innerHTML = hotel.rooms;
   document.getElementById('hotelbooked').innerHTML = hotel.booked;
@@ -76,6 +81,6 @@ function Living(name, rooms, booked, bathroom, tv, bed){
   document.getElementById('motelbath').innerHTML = motel.bathroom;
   document.getElementById('moteltv').innerHTML = motel.tv;
 
-
+//to show which year it is at the bottom of the page I used 'getFullYear' and 'getElementById' to show it in the HTML//
 const siteCreation= new Date();
 document.getElementById('fullyear').innerHTML = siteCreation.getFullYear();
